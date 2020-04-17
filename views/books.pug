@@ -1,0 +1,10 @@
+extends layouts/main-layout.pug
+
+block content
+    h1 Books
+    if myBooks.length > 0
+        ul
+            each book in myBooks 
+                li  #{book.title}
+    else    
+        h1 No Books Found!
